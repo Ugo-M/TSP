@@ -31,11 +31,10 @@ public class Main {
 		System.out.println("distance parcourue descente locale 20.in3 : " + traveledDistance);
 		WriteFile.write(travel, traveledDistance, "20.out3");
 
-
-//		traveledDistance = RecuitSim.calculate(new Travel(ReadFile.read("20.in3")), 10, 10000, 0.9995, "20.out3");
-//		System.out.println("distance parcourue recuit simulé 20.in3 : " + traveledDistance);
+		RecuitSim rc = new RecuitSim(ReadFile.read("20.in3"));
+		rc.calculate("20.out3");
 	
-		
+
 		
 		System.out.println("\n//////////////////////////////\n");
 		
@@ -53,14 +52,14 @@ public class Main {
 		System.out.println("distance parcourue descente locale 100.in3 : " + traveledDistance);
 		WriteFile.write(travel, traveledDistance, "100.out3");
 
-//		traveledDistance = RecuitSim.calculate(new Travel(ReadFile.read("100.in3")), 10, 10000, 0.9995, "100.out3");
-//		System.out.println("distance parcourue recuit simulé 100.in3 : " + traveledDistance);
+
+		rc = new RecuitSim(ReadFile.read("100.in3"));
+		rc.calculate("100.out3");
 
 
 		System.out.println("\n//////////////////////////////\n");
 		
-		
-		
+
 		
 		ReadFile createCity1000 = new ReadFile();
 		listOfCity = createCity1000.read("1000.in3");
@@ -75,7 +74,7 @@ public class Main {
 		System.out.println("distance parcourue descente locale 1000.in3 : " + traveledDistance);
 		WriteFile.write(travel, traveledDistance, "1000.out3");
 
-//		traveledDistance = RecuitSim.calculate(new Travel(ReadFile.read("1000.in3")), 10, 10000, 0.9995, "1000.out3");
-//		System.out.println("distance parcourue recuit simulé 1000.in3 : " + traveledDistance);
+		rc = new RecuitSim(ReadFile.read("1000.in3"));
+		rc.calculate("1000.out3");
 	}
 }
